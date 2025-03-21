@@ -1,32 +1,34 @@
-"use server"
-import { readdirSync, statSync } from "fs";
-import { join } from "path";
-import { Document } from "@/components/document-section";
+"use server";
+import { Octokit } from "@octokit/core";
+
+const octokit = new Octokit({
+    auth: process.env.GITHUB_TOKEN,
+})
 
 export async function getDocuments() {
-    const documents: Document[] = []
-    const documentsPath = join(process.cwd(), "public", "documents")
+    // Octokit.js
+    // https://github.com/octokit/core.js#readme
 
-    readdirSync(documentsPath).forEach((file) => {
-        const filePath = join(documentsPath, file)
-        const stats = statSync(filePath)
-        const fileType = file.split(".").pop()
-        const fileDate = stats.mtime.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "2-digit",
-            day: "2-digit",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit",
-        })
-        const document: Document = {
-            id: file,
-            title: file,
-            date: fileDate,
-            type: fileType || "unknown",
+    const res = await octokit.request('GET /repos/gameupyourlife/software-project-team-website/contents/public/documents/', {
+        owner: 'OWNER',
+        repo: 'REPO',
+        path: 'PATH',
+        headers: {
+            'X-GitHub-Api-Version': '2022-11-28'
         }
-        documents.push(document)
     })
 
-    return documents
+    const documents = res.data.map((doc: any) => {
+        const fileName = doc.name.split(".")[0]
+        const fileType = doc.name.split(".")[1]
+        return {
+            id: doc.path,
+            title: fileName,
+            type: fileType,
+            url: doc.download_url,
+        }
+    })
+
+
+    return documents;
 }

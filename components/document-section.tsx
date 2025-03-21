@@ -8,8 +8,8 @@ import { Button } from "./ui/button";
 export type Document = {
   id: string
   title: string
-  date: string
   type: string
+  url: string
 }
 
 export default function DocumentSection() {
@@ -85,13 +85,12 @@ export default function DocumentSection() {
                 {getDocumentIcon(doc.type)}
                 <div className="ml-3">
                   <h3 className="text-lg font-semibold">{doc.title}</h3>
-                  <p className="text-sm text-muted-foreground">{doc.date}</p>
                 </div>
                 <Button
                   className="ml-auto"
                   onClick={() => {
                     const link = document.createElement("a")
-                    link.href = `/documents/${doc.id}`
+                    link.href = doc.url
                     link.download = doc.title
                     document.body.appendChild(link)
                     link.click()
