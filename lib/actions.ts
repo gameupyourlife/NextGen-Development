@@ -18,7 +18,13 @@ export async function getDocuments() {
         }
     })
 
-    const documents = res.data.map((doc: any) => {
+    interface GithubContentFile {
+        name: string;
+        path: string;
+        download_url: string;
+    }
+
+    const documents = res.data.map((doc: GithubContentFile) => {
         const fileName = doc.name.split(".")[0]
         const fileType = doc.name.split(".")[1]
         return {
