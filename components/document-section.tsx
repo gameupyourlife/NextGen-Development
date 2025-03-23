@@ -39,11 +39,6 @@ export default function DocumentSection() {
     }
   };
 
-  const getFileExtension = (title: string) => {
-    const parts = title.split('.');
-    return parts.length > 1 ? parts[parts.length - 1].toUpperCase() : '';
-  };
-
   useEffect(() => {
     const fetchDocuments = async () => {
       try {
