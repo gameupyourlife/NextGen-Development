@@ -19,14 +19,26 @@ export async function getDocuments() {
     })
 
     interface GithubContentFile {
-        name: string;
-        path: string;
-        download_url: string;
+        name: string,
+        path: string,
+        sha: string,
+        size: number,
+        url: string,
+        html_url: string,
+        git_url: string,
+        download_url: string,
+        type: string,
+        _links: {
+            self: string,
+            git: string,
+            html: string
+        }
     }
 
     const documents = res.data.map((doc: GithubContentFile) => {
-        const fileName = doc.name.split(".")[0]
-        const fileType = doc.name.split(".")[1]
+        const dockNameSplit = doc.name.split(".")
+        const fileName = dockNameSplit.slice(0, dockNameSplit.length - 1).join(".")
+        const fileType = dockNameSplit[dockNameSplit.length - 1]
         return {
             id: doc.path,
             title: fileName,
