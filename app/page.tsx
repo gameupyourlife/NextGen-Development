@@ -2,10 +2,16 @@ import TeamProfiles from "@/components/team-profiles"
 import DocumentSection from "@/components/document-section"
 import ProjectSection from "@/components/project-section"
 import ProjectPlan from "@/components/project-plan"
+import Logo from "@/components/logo"
 
 export default function TeamPage() {
   return (
     <div className="container  py-10 space-y-12 ">
+      <div className="flex flex-col items-center justify-center">
+        <div className="w-3xs">
+          <Logo />
+        </div>
+      </div>
       <ProjectSection />
 
 
