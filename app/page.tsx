@@ -67,7 +67,7 @@ export default function TeamPage() {
 
       {/* Footer */}
       <footer className="container py-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
-        <p>© {new Date().getFullYear()} Event Management Projekt. Alle Rechte vorbehalten.</p>
+        <p>© {new Date().getFullYear()} NextGen Development. Alle Rechte vorbehalten.</p>
       </footer>
     </main>
   )
