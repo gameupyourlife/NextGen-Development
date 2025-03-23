@@ -15,7 +15,7 @@ export default function Logo() {
             <g
                 id="SvgjsG4936"
                 transform="matrix(1.1224489795918369,0,0,1.1224489795918369,-16.836734693877553,-11.22448979591837)"
-                fill="#111"
+                fill="url(#SvgjsLinearGradient4942)"
             >
                 <path
                     xmlns="http://www.w3.org/2000/svg"
