@@ -32,7 +32,7 @@ export default function TeamPage() {
             Unser Team
           </h1>
           <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-lg">
-            Die Gruppe besteht aus fünf Mitgliedern, die sich auf verschiedene Bereiche spezialisiert haben. 
+            Die Gruppe besteht aus fünf Mitgliedern, die sich auf verschiedene Bereiche spezialisiert haben.
             Jeder bringt seine eigenen Fähigkeiten und Erfahrungen ein, um das Projekt erfolgreich umzusetzen.
           </p>
         </div>
@@ -40,19 +40,19 @@ export default function TeamPage() {
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-72 h-72 bg-blue-200/10 dark:bg-blue-500/5 rounded-full filter blur-3xl -z-10"></div>
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-purple-200/10 dark:bg-purple-500/5 rounded-full filter blur-3xl -z-10"></div>
-        
+
         <div className="mt-12">
           <TeamProfiles />
         </div>
       </section>
 
       {/* Project plan section with subtle background */}
-      <section className="container py-16 bg-slate-50/50 dark:bg-slate-900/30 rounded-xl my-8">
+      <section className="container py-16  rounded-xl my-8">
         <ProjectPlan />
       </section>
 
       {/* Document section */}
-      <section className="container py-16 border-t border-slate-200 dark:border-slate-800">
+      <section className="container py-16  border-slate-200 dark:border-slate-800">
         <div className="mb-10 text-center">
           <div className="inline-block px-6 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full mb-2">
             <span className="text-sm font-medium text-slate-800 dark:text-slate-200">Dokumente</span>
