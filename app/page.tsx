@@ -1,6 +1,7 @@
 import TeamProfiles from "@/components/team-profiles"
 import DocumentSection from "@/components/document-section"
 import ProjectSection from "@/components/project-section"
+import ProjectPlan from "@/components/project-plan"
 
 export default function TeamPage() {
   return (
@@ -16,6 +17,8 @@ export default function TeamPage() {
       </div>
 
       <TeamProfiles />
+
+      <ProjectPlan />
 
       <div className="pt-8 border-t">
         <DocumentSection />
