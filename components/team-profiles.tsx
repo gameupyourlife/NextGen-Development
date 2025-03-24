@@ -17,7 +17,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Ayo A",
+    name: "Ayo Adeniyi",
     role: "Verantwortlicher für Tests",
     email: "i23XXX@hb.dhbw-stuttgart.de",
     image: "/placeholder.svg?height=300&width=300",
@@ -25,7 +25,7 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Din",
+    name: "Din Alomerovic",
     role: "Verantwortlicher für Modellierung",
     subtitle: "und Recherche",
     email: "i23XXX@hb.dhbw-stuttgart.de",
@@ -43,7 +43,7 @@ const teamMembers = [
   },
   {
     id: 5,
-    name: "Rebecca",
+    name: "Rebecca Niklaus",
     role: "Verantwortliche für Qualitätssicherung",
     email: "i23XXX@hb.dhbw-stuttgart.de",
     image: "/placeholder.svg?height=300&width=300",
