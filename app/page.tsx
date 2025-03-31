@@ -3,6 +3,7 @@ import DocumentSection from "@/components/document-section"
 import ProjectSection from "@/components/project-section"
 import ProjectPlan from "@/components/project-plan"
 import Logo from "@/components/logo"
+import { CollapsibleSection } from "@/components/collapsible-section"
 
 export default function TeamPage() {
   return (
@@ -52,18 +53,22 @@ export default function TeamPage() {
       </section>
 
       {/* Document section */}
-      <section className="container py-16  border-slate-200 dark:border-slate-800">
-        <div className="mb-10 text-center">
-          <div className="inline-block px-6 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full mb-2">
-            <span className="text-sm font-medium text-slate-800 dark:text-slate-200">Dokumente</span>
+      
+        <section className="container py-16  border-slate-200 dark:border-slate-800">
+          <div className="mb-10 text-center">
+            <div className="inline-block px-6 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full mb-2">
+              <span className="text-sm font-medium text-slate-800 dark:text-slate-200">Dokumente</span>
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight">Projektdokumente</h2>
+            <p className="mt-3 max-w-2xl mx-auto text-slate-600 dark:text-slate-400">
+              Hier finden Sie alle wichtigen Dokumente zum Projekt.
+            </p>
           </div>
-          <h2 className="text-3xl font-bold tracking-tight">Projektdokumente</h2>
-          <p className="mt-3 max-w-2xl mx-auto text-slate-600 dark:text-slate-400">
-            Hier finden Sie alle wichtigen Dokumente zum Projekt.
-          </p>
-        </div>
-        <DocumentSection />
-      </section>
+          <CollapsibleSection title="Allgemein">
+            <DocumentSection path="public/documents/Allgemein"/>
+          </CollapsibleSection>
+        </section>
+      
 
       {/* Footer */}
       <footer className="container py-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
