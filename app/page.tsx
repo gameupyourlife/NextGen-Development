@@ -64,9 +64,17 @@ export default function TeamPage() {
               Hier finden Sie alle wichtigen Dokumente zum Projekt.
             </p>
           </div>
-          <CollapsibleSection title="Allgemein">
-            <DocumentSection path="public/documents/Allgemein"/>
-          </CollapsibleSection>
+          <div className="flex flex-col gap-8"> 
+            <CollapsibleSection title="Allgemein">
+              <DocumentSection path="public/documents/Allgemein" />
+            </CollapsibleSection>
+            <CollapsibleSection title="Aufgabenblatt 1">
+              <DocumentSection path="public/documents/Aufgabnblatt 1" />
+            </CollapsibleSection>
+            <CollapsibleSection title="Aufgabenblatt 2">
+              <DocumentSection path="public/documents/Aufgabnblatt 2" />
+            </CollapsibleSection>
+          </div>
         </section>
       
 
