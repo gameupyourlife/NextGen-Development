@@ -69,13 +69,13 @@ export default function TeamPage() {
               <DocumentSection path="public/documents/Allgemein" />
             </CollapsibleSection>
             <CollapsibleSection title="Aufgabenblatt 1">
-              <DocumentSection path="public/documents/Aufgabnblatt 1" />
+              <DocumentSection path="public/documents/Aufgabenblatt 1" />
             </CollapsibleSection>
             <CollapsibleSection title="Aufgabenblatt 2">
-              <DocumentSection path="public/documents/Aufgabnblatt 2" />
+              <DocumentSection path="public/documents/Aufgabenblatt 2" />
             </CollapsibleSection>
             <CollapsibleSection title="Aufgabenblatt 3">
-              <DocumentSection path="public/documents/Aufgabnblatt 3" />
+              <DocumentSection path="public/documents/Aufgabenblatt 3" />
             </CollapsibleSection>
           </div>
         </section>
