@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { FileIcon, FileTextIcon, ImageIcon, SearchIcon, XIcon, DownloadIcon, FolderIcon } from "lucide-react";
@@ -8,19 +8,23 @@ import { Card, CardFooter } from "./ui/card";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
 
 export type Document = {
-  id: string
-  title: string
-  type: string
-  url: string
-}
+  id: string;
+  title: string;
+  type: string;
+  url: string;
+};
 
-export default function DocumentSection() {
+type DocumentSectionProps = {
+  path: string; // Pfad als Prop
+};
+
+export default function DocumentSection({ path }: DocumentSectionProps) {
   const [documents, setDocuments] = useState<Document[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState("all");
 
   // Get unique document types for filtering
-  const documentTypes = ["all", ...new Set(documents.map(doc => doc.type))];
+  const documentTypes = ["all", ...new Set(documents.map((doc) => doc.type))];
 
   const filteredDocuments = documents.filter((doc) => {
     const matchesSearch = doc.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -42,15 +46,14 @@ export default function DocumentSection() {
   useEffect(() => {
     const fetchDocuments = async () => {
       try {
-        const res = await getDocuments();
+        const res = await getDocuments(path); // Pfad wird hier verwendet
         setDocuments(res);
-      }
-      catch (error) {
+      } catch (error) {
         console.error("Error fetching documents:", error);
       }
     };
     fetchDocuments();
-  }, []);
+  }, [path]); // Abhängigkeit von `path`
 
   return (
     <div className="w-full max-w-7xl mx-auto">
@@ -112,16 +115,8 @@ export default function DocumentSection() {
                       <h3 className="text-base font-semibold line-clamp-1">{doc.title}</h3>
                     </div>
                   </div>
-                  {/* <Badge variant="outline" className="uppercase">
-                    {getFileExtension(doc.title)}
-                  </Badge> */}
                 </div>
               </div>
-              {/* <CardContent className="p-6 pt-4">
-                <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
-                  {doc.title}
-                </p>
-              </CardContent> */}
               <CardFooter className=" bg-white dark:bg-transparent border-t border-slate-100 dark:border-slate-800">
                 <Button
                   variant="outline"
