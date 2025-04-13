@@ -23,6 +23,54 @@ export default function TeamPage() {
         <ProjectSection />
       </section>
 
+      {/* Prototype section */}
+      <section className="container py-16 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/20 via-purple-50/20 to-blue-50/20 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-blue-950/20 rounded-xl -z-10"></div>
+        <div className="space-y-6 text-center">
+          <div className="inline-block px-6 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full mb-2">
+            <span className="text-sm font-medium text-slate-800 dark:text-slate-200">Prototyp</span>
+          </div>
+          <h2 className="text-3xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-700 dark:from-slate-100 dark:to-slate-300">
+            Event Management System
+          </h2>
+          <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-lg">
+            Testen Sie unseren funktionierenden Prototypen mit den untenstehenden Anmeldedaten.
+          </p>
+        </div>
+
+        <div className="mt-8 flex flex-col items-center">
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 w-full max-w-md">
+            <div className="mb-4">
+              <h3 className="font-semibold text-lg mb-2">Zugangsdaten:</h3>
+              <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-2">
+                <span className="font-medium">URL:</span>
+                <a href="https://ems.gameup.dev/" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-600 dark:text-blue-400 hover:underline truncate">
+                  https://ems.gameup.dev/
+                </a>
+                <span className="font-medium">E-Mail:</span>
+                <span className="font-mono bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded text-sm">test@mail.de</span>
+                <span className="font-medium">Passwort:</span>
+                <span className="font-mono bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded text-sm">Test123!</span>
+              </div>
+            </div>
+            <a 
+              href="https://ems.gameup.dev/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded text-center transition-colors"
+            >
+              Prototyp öffnen
+            </a>
+          </div>
+
+          <div className="mt-6 text-sm text-slate-500 dark:text-slate-400 max-w-md text-center">
+            Der Prototyp demonstriert die grundlegenden Funktionen unseres Event Management Systems.
+            Bitte beachten Sie, dass sich das System noch in der Entwicklung befindet.
+          </div>
+        </div>
+      </section>
+
       {/* Team section */}
       <section className="container py-16 relative overflow-hidden">
         <div className="space-y-6 text-center">
