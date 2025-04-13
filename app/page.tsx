@@ -77,6 +77,9 @@ export default function TeamPage() {
             <CollapsibleSection title="Aufgabenblatt 3">
               <DocumentSection path="public/documents/Aufgabenblatt 3" />
             </CollapsibleSection>
+            <CollapsibleSection title="Aufgabenblatt 4">
+              <DocumentSection path="public/documents/Aufgabenblatt 4" />
+            </CollapsibleSection>
           </div>
         </section>
       
