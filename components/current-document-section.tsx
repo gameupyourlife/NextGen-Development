@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { FileText } from "lucide-react";
 import { getDocuments } from "@/lib/actions";
-import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
 import { Card, CardFooter } from "./ui/card";
 
