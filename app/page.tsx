@@ -72,7 +72,7 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <DocumentDisplaySection path={"/documents/Aktuell"} />
+      <DocumentDisplaySection path={"public/documents/Aktuell"} />
 
       {/* Team section */}
       <section className="container py-16 relative overflow-hidden">

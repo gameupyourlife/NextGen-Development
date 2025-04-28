@@ -46,15 +46,14 @@ export default function DocumentSection({ path }: DocumentSectionProps) {
   useEffect(() => {
     const fetchDocuments = async () => {
       try {
-        const res = await getDocuments(path); // Pfad wird hier verwendet
+        const res = await getDocuments(path);
         setDocuments(res);
       } catch (error) {
         console.error("Error fetching documents:", error);
       }
     };
     fetchDocuments();
-  }, [path]); // Abhängigkeit von `path`
-
+  }, [path]);
   return (
     <div className="w-full max-w-7xl mx-auto">
       {/* Search and filter bar */}
