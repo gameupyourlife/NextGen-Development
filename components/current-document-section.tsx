@@ -1,4 +1,4 @@
-"use client";
+"use client";;
 import { useEffect, useState } from "react";
 import { FileText } from "lucide-react";
 import { getDocuments} from "@/lib/actions";
