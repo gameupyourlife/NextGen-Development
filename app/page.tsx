@@ -4,6 +4,7 @@ import ProjectSection from "@/components/project-section"
 import ProjectPlan from "@/components/project-plan"
 import Logo from "@/components/logo"
 import { CollapsibleSection } from "@/components/collapsible-section"
+import DocumentDisplaySection from "@/components/current-document-section"
 
 export default function TeamPage() {
   return (
@@ -70,6 +71,8 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
+
+      <DocumentDisplaySection path={"/documents/Aktuell"} />
 
       {/* Team section */}
       <section className="container py-16 relative overflow-hidden">

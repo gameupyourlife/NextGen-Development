@@ -15,7 +15,7 @@ export type Document = {
 };
 
 type DocumentSectionProps = {
-  path: string; // Pfad als Prop
+  path: string;
 };
 
 export default function DocumentSection({ path }: DocumentSectionProps) {
