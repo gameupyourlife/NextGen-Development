@@ -35,7 +35,7 @@ export default function TeamPage() {
             Event Management System
           </h2>
           <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-lg">
-            Testen Sie unseren funktionierenden Prototypen mit den untenstehenden Anmeldedaten.
+            Testen Sie unsere aktuelle Demo-Version mit den untenstehenden Anmeldedaten.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function TeamPage() {
               rel="noopener noreferrer"
               className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded text-center transition-colors"
             >
-              Prototyp öffnen
+              Demo-Version öffnen
             </a>
           </div>
 
